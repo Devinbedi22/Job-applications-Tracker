@@ -1,0 +1,204 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: linen;
+  color: #333;
+}
+
+/* Main container */
+.container {
+  max-width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #5e0080;
+  margin: 0.5rem 0;
+}
+
+.header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Form container */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.form-container textarea {
+  flex: 1 1 30%;
+  min-width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+  height: 48px; /* Same as other inputs */
+  resize: none; /* Optional: removes the resize handle */
+}
+
+/* Inputs, selects, textarea styles */
+.form-container input,
+.form-container select {
+  flex: 1 1 30%;
+  min-width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Add button */
+#add-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#add-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Search and filter section */
+.search-filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.search-filter-container input,
+.search-filter-container select {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Filter and Reset buttons */
+.filter-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.filter-actions button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter button (first) */
+.filter-actions button:first-child {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: white;
+}
+
+.filter-actions button:last-child {
+  background-color: #ffffffcc;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.filter-actions button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Application section */
+.applications-section {
+  margin-top: 2rem;
+}
+
+.applications-section h2 {
+  text-align: center;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+}
+
+.application-card {
+  background-color: white;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.job-card {
+  background: linear-gradient(to right, #fbeee6, #f6dede);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.job-card h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.job-card .company {
+  font-weight: normal;
+  color: #555;
+}
+
+.job-card p {
+  margin: 0.3rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.job-card i {
+  color: #777;
+  margin-right: 8px;
+}
+
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    flex: 1 1 100%;
+  }
+
+  .search-filter-container {
+    flex-direction: column;
+  }
+
+  .filter-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

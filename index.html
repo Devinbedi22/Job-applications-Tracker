@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="stylee.css" />
+</head>
+<body>
+  <!-- LOGIN -->
+  <section id="login-section">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button id="login-btn">Login</button>
+    <p>Don't have an account? <button id="show-signup" type="button">Sign up</button></p>
+  </section>
+
+  <!-- SIGNUP -->
+  <section id="signup-section" style="display: none;">
+    <h2>Sign Up</h2>
+    <input type="email" id="signup-email" placeholder="Email" required />
+    <input type="password" id="signup-password" placeholder="Password" required />
+    <button id="signup-btn">Sign Up</button>
+    <p>Already have an account? <button id="show-login" type="button">Login</button></p>
+  </section>
+
+  <!-- MAIN APP -->
+  <section id="app-section" style="display: none;">
+    <h2>📍 Welcome to the Job Tracker</h2>
+    <button onclick="logout()">Logout</button>
+
+    <!-- New Application Form -->
+    <h3>📅 Add Application</h3>
+    <form id="application-form">
+      <input type="text" id="jobTitle" placeholder="Job Title" required />
+      <input type="text" id="company" placeholder="Company" required />
+      <input type="text" id="location" placeholder="Location" required />
+      <input type="text" id="status" placeholder="Status (e.g., applied)" required />
+      <input type="date" id="dateApplied" required />
+      <textarea id="notes" placeholder="Notes"></textarea>
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Filters -->
+    <h3>Filter Applications</h3>
+    <input type="text" id="filterTitle" placeholder="Job Title" oninput="filterApplications()" />
+    <input type="text" id="filterCompany" placeholder="Company" oninput="filterApplications()" />
+    <input type="text" id="filterStatus" placeholder="Status" oninput="filterApplications()" />
+    <button type="button" onclick="resetFilters()">Reset Filters</button>
+
+    <!-- Applications List -->
+    <h3>My Applications</h3>
+    <div id="applications-list" class="card-container"></div>
+
+    <!-- External Jobs Search -->
+    <h3>Search External Jobs</h3>
+    <input type="text" id="searchQuery" placeholder="Search jobs..." />
+    <button type="button" onclick="fetchExternalJobs()">Search</button>
+    <div id="external-jobs-list" class="card-container"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
